@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://athiterra.com/sitemap.xml

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/webp" href="images/image_01.webp">
+  <link rel="apple-touch-icon" href="images/image_01.webp">
+
+  <!-- ============================================================
+       STEP 1: Replace these values for your new page
+       ============================================================ -->
+  <title>{{PAGE_TITLE}} | AthiTerra</title>
+  <meta name="description" content="{{META_DESCRIPTION — about 150-160 characters}}"/>
+  <meta name="keywords" content="{{keyword1, keyword2, keyword3, AthiTerra}}"/>
+  <meta name="author" content="AthiTerra"/>
+  <meta name="robots" content="index, follow"/>
+
+  <!-- STEP 2: Replace {{FILENAME}} — e.g. blog.html, faq.html, certifications.html -->
+  <link rel="canonical" href="https://www.athiterra.com/{{FILENAME}}.html"/>
+  <link rel="alternate" hreflang="en" href="https://www.athiterra.com/{{FILENAME}}.html"/>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{PAGE_TITLE}} | AthiTerra"/>
+  <meta property="og:description" content="{{META_DESCRIPTION}}"/>
+  <meta property="og:image" content="https://www.athiterra.com/images/{{PAGE_IMAGE}}"/>
+  <meta property="og:url" content="https://www.athiterra.com/{{FILENAME}}.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="AthiTerra"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="{{PAGE_TITLE}} | AthiTerra"/>
+  <meta name="twitter:description" content="{{META_DESCRIPTION}}"/>
+  <meta name="twitter:image" content="https://www.athiterra.com/images/{{PAGE_IMAGE}}"/>
+
+  <!-- Schema — change @type as needed: WebPage, FAQPage, AboutPage, etc. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "{{PAGE_TITLE}} — AthiTerra",
+    "description": "{{META_DESCRIPTION}}",
+    "url": "https://www.athiterra.com/{{FILENAME}}.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "AthiTerra",
+      "url": "https://www.athiterra.com/",
+      "logo": "https://www.athiterra.com/images/image_01.webp"
+    }
+  }
+  </script>
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.athiterra.com/" },
+      { "@type": "ListItem", "position": 2, "name": "{{PAGE_TITLE}}", "item": "https://www.athiterra.com/{{FILENAME}}.html" }
+    ]
+  }
+  </script>
+
+  <!-- DO NOT EDIT — shared fonts and styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="toast" id="toast">&#10003; Message sent! We'll be in touch soon.</div>
+
+  <!-- Nav injected by components.js -->
+  <nav id="site-nav"></nav>
+
+  <!-- ============================================================
+       STEP 3: Your page content goes here
+       Use the section patterns below as building blocks.
+       Delete any blocks you don't need.
+       ============================================================ -->
+
+  <!-- BLOCK: Page Header (always include) -->
+  <section style="padding-top:140px;">
+    <div class="section-inner">
+      <div class="reveal">
+        <p class="section-tag">{{SECTION_TAG — e.g. "Resources", "FAQ", "Blog"}}</p>
+        <h1 class="section-title">{{PAGE_HEADING}} <span class="g">{{HIGHLIGHTED_WORD}}</span></h1>
+        <span class="swoosh-line"></span>
+        <p style="font-size:1rem; line-height:1.8; color:var(--text-mid); max-width:680px;">
+          {{PAGE_INTRO_TEXT}}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCK: Two-column content with image (optional — delete if not needed) -->
+  <!--
+  <section style="background:var(--off-white);">
+    <div class="section-inner about-grid">
+      <div class="about-image-wrap reveal">
+        <div class="about-image-box">
+          <img src="images/{{IMAGE}}" alt="{{ALT_TEXT}}" width="600" height="660" loading="lazy"/>
+        </div>
+      </div>
+      <div class="about-text reveal">
+        <p class="section-tag">{{TAG}}</p>
+        <h2 class="section-title">{{HEADING}} <span class="g">{{HIGHLIGHT}}</span></h2>
+        <span class="swoosh-line"></span>
+        <p>{{PARAGRAPH_TEXT}}</p>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- BLOCK: Feature cards grid (optional — delete if not needed) -->
+  <!--
+  <section>
+    <div class="section-inner">
+      <div class="quality-cards reveal">
+        <div class="quality-cert-card">
+          <div class="cert-icon">&#x1F3C6;</div>
+          <h4>{{CARD_TITLE}}</h4>
+          <p>{{CARD_TEXT}}</p>
+        </div>
+        Add more cards as needed...
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- BLOCK: Green CTA band (optional — delete if not needed) -->
+  <!--
+  <div class="vm-band">
+    <div class="vm-inner" style="text-align:center; grid-template-columns:1fr;">
+      <div class="reveal">
+        <p class="vm-label" style="justify-content:center;">{{CTA_LABEL}}</p>
+        <p class="vm-text">{{CTA_TEXT}}</p>
+        <div style="margin-top:2rem;">
+          <a href="contact.html" class="btn-yellow">{{CTA_BUTTON}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  -->
+
+  <!-- Footer + WhatsApp injected by components.js -->
+  <footer id="site-footer"></footer>
+  <div id="site-whatsapp"></div>
+
+  <!-- ============================================================
+       STEP 4: Don't forget!
+       1. Add nav link in components.js → NAV_LINKS (if needed)
+       2. Add URL to sitemap.xml
+       ============================================================ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+  <script src="components.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

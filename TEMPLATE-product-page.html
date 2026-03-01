@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/webp" href="images/image_01.webp">
+  <link rel="apple-touch-icon" href="images/image_01.webp">
+
+  <!-- ============================================================
+       STEP 1: Replace these 4 values for your new product
+       ============================================================ -->
+  <title>{{PRODUCT_NAME}} | AthiTerra | {{SHORT_DESCRIPTION}}</title>
+  <meta name="description" content="{{META_DESCRIPTION — about 150-160 characters describing this product}}"/>
+  <meta name="keywords" content="{{keyword1, keyword2, keyword3, keyword4, AthiTerra}}"/>
+  <meta name="author" content="AthiTerra"/>
+  <meta name="robots" content="index, follow"/>
+
+  <!-- ============================================================
+       STEP 2: Replace {{FILENAME}} with your file name
+       Example: product-pickled-peppers.html
+       ============================================================ -->
+  <link rel="canonical" href="https://www.athiterra.com/{{FILENAME}}.html"/>
+  <link rel="alternate" hreflang="en" href="https://www.athiterra.com/{{FILENAME}}.html"/>
+
+  <!-- Open Graph — copy title and description from above -->
+  <meta property="og:title" content="{{PRODUCT_NAME}} | AthiTerra | {{SHORT_DESCRIPTION}}"/>
+  <meta property="og:description" content="{{META_DESCRIPTION}}"/>
+  <meta property="og:image" content="https://www.athiterra.com/images/{{PRODUCT_IMAGE}}"/>
+  <meta property="og:url" content="https://www.athiterra.com/{{FILENAME}}.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="AthiTerra"/>
+
+  <!-- Twitter Card — copy title and description from above -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="{{PRODUCT_NAME}} | AthiTerra | {{SHORT_DESCRIPTION}}"/>
+  <meta name="twitter:description" content="{{META_DESCRIPTION}}"/>
+  <meta name="twitter:image" content="https://www.athiterra.com/images/{{PRODUCT_IMAGE}}"/>
+
+  <!-- Schema — Product markup for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "{{PRODUCT_NAME}}",
+    "description": "{{META_DESCRIPTION}}",
+    "image": "https://www.athiterra.com/images/{{PRODUCT_IMAGE}}",
+    "brand": {
+      "@type": "Brand",
+      "name": "AthiTerra"
+    },
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "AthiTerra",
+      "url": "https://www.athiterra.com/"
+    },
+    "category": "Food Ingredients"
+  }
+  </script>
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.athiterra.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://www.athiterra.com/products.html" },
+      { "@type": "ListItem", "position": 3, "name": "{{PRODUCT_NAME}}", "item": "https://www.athiterra.com/{{FILENAME}}.html" }
+    ]
+  }
+  </script>
+
+  <!-- DO NOT EDIT BELOW — shared fonts and styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="toast" id="toast">&#10003; Message sent! We'll be in touch soon.</div>
+
+  <!-- Nav injected by components.js -->
+  <nav id="site-nav"></nav>
+
+  <!-- BREADCRUMB -->
+  <div class="pd-breadcrumb">
+    <div class="section-inner">
+      <a href="index.html">Home</a> <span>&#8250;</span>
+      <a href="products.html">Products</a> <span>&#8250;</span>
+      <span class="current">{{PRODUCT_NAME}}</span>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       STEP 3: Product hero section — edit content below
+       ============================================================ -->
+  <section class="pd-hero">
+    <div class="section-inner pd-hero-grid">
+      <div class="pd-hero-image reveal">
+        <img src="images/{{PRODUCT_IMAGE}}" alt="{{IMAGE_ALT_TEXT}}" width="600" height="400" fetchpriority="high"/>
+      </div>
+      <div class="pd-hero-text reveal">
+        <p class="section-tag">AthiTerra Product</p>
+        <h1 class="section-title">{{FIRST_WORD}} <span class="g">{{REMAINING_WORDS}}</span></h1>
+        <span class="swoosh-line"></span>
+        <p class="pd-tagline">{{PRODUCT_TAGLINE — short italic phrase}}</p>
+        <p class="pd-intro">{{PRODUCT_INTRO — 2-3 sentences describing the product}}</p>
+        <div class="pd-hero-btns">
+          <a href="contact.html" class="btn-yellow">Request a Quote</a>
+          <a href="products.html" class="btn-outline-green">All Products</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       STEP 4: Key features — edit the 4 feature cards
+       ============================================================ -->
+  <section class="pd-features">
+    <div class="section-inner">
+      <div class="pd-features-header reveal">
+        <p class="section-tag">Key Features</p>
+        <h2 class="section-title">Why Choose Our <span class="g">{{PRODUCT_NAME}}</span></h2>
+        <span class="swoosh-line"></span>
+      </div>
+      <div class="pd-features-grid">
+
+        <div class="pd-feature-card reveal">
+          <div class="pd-feature-icon">{{EMOJI_1}}</div>
+          <h4>{{FEATURE_1_TITLE}}</h4>
+          <p>{{FEATURE_1_DESCRIPTION}}</p>
+        </div>
+
+        <div class="pd-feature-card reveal">
+          <div class="pd-feature-icon">{{EMOJI_2}}</div>
+          <h4>{{FEATURE_2_TITLE}}</h4>
+          <p>{{FEATURE_2_DESCRIPTION}}</p>
+        </div>
+
+        <div class="pd-feature-card reveal">
+          <div class="pd-feature-icon">{{EMOJI_3}}</div>
+          <h4>{{FEATURE_3_TITLE}}</h4>
+          <p>{{FEATURE_3_DESCRIPTION}}</p>
+        </div>
+
+        <div class="pd-feature-card reveal">
+          <div class="pd-feature-icon">{{EMOJI_4}}</div>
+          <h4>{{FEATURE_4_TITLE}}</h4>
+          <p>{{FEATURE_4_DESCRIPTION}}</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       STEP 5: Applications & Specifications
+       ============================================================ -->
+  <section class="pd-details">
+    <div class="section-inner pd-details-grid">
+      <div class="pd-applications reveal">
+        <h3><span class="g">&#x1F4CC;</span> Applications</h3>
+        <ul class="commitment-list">
+          <li><span class="check">&#10003;</span> {{APPLICATION_1}}</li>
+          <li><span class="check">&#10003;</span> {{APPLICATION_2}}</li>
+          <li><span class="check">&#10003;</span> {{APPLICATION_3}}</li>
+          <li><span class="check">&#10003;</span> {{APPLICATION_4}}</li>
+          <li><span class="check">&#10003;</span> {{APPLICATION_5}}</li>
+        </ul>
+      </div>
+      <div class="pd-specs reveal">
+        <h3><span class="g">&#x1F4CB;</span> Specifications</h3>
+        <div class="pd-specs-table">
+          <div class="pd-spec-row">
+            <span class="pd-spec-label">{{SPEC_1_LABEL}}</span>
+            <span class="pd-spec-value">{{SPEC_1_VALUE}}</span>
+          </div>
+          <div class="pd-spec-row">
+            <span class="pd-spec-label">{{SPEC_2_LABEL}}</span>
+            <span class="pd-spec-value">{{SPEC_2_VALUE}}</span>
+          </div>
+          <div class="pd-spec-row">
+            <span class="pd-spec-label">{{SPEC_3_LABEL}}</span>
+            <span class="pd-spec-value">{{SPEC_3_VALUE}}</span>
+          </div>
+          <div class="pd-spec-row">
+            <span class="pd-spec-label">{{SPEC_4_LABEL}}</span>
+            <span class="pd-spec-value">{{SPEC_4_VALUE}}</span>
+          </div>
+          <div class="pd-spec-row">
+            <span class="pd-spec-label">{{SPEC_5_LABEL}}</span>
+            <span class="pd-spec-value">{{SPEC_5_VALUE}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND — no edits needed -->
+  <div class="vm-band">
+    <div class="vm-inner" style="text-align:center; grid-template-columns:1fr;">
+      <div class="reveal">
+        <p class="vm-label" style="justify-content:center;">Interested in {{PRODUCT_NAME}}?</p>
+        <p class="vm-text">Get in touch with our team for samples, pricing, and custom specifications.</p>
+        <div style="margin-top:2rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+          <a href="contact.html" class="btn-yellow">Request a Sample</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       STEP 6: Related products — pick 3 other products to link to
+       ============================================================ -->
+  <section class="pd-related">
+    <div class="section-inner">
+      <div class="products-header reveal">
+        <p class="section-tag">Explore More</p>
+        <h2 class="section-title">Related <span class="g">Products</span></h2>
+        <span class="swoosh-line"></span>
+      </div>
+      <div class="products-grid" style="grid-template-columns: repeat(3, 1fr);">
+
+        <a href="{{RELATED_1_HREF}}" class="product-card reveal" style="text-decoration:none;color:inherit;">
+          <div class="product-img">
+            <img src="images/{{RELATED_1_IMAGE}}" alt="{{RELATED_1_NAME}} — AthiTerra" width="400" height="200" loading="lazy"/>
+          </div>
+          <div class="product-body">
+            <h3>{{RELATED_1_NAME}}</h3>
+            <span class="product-link">View Product &#8594;</span>
+          </div>
+        </a>
+
+        <a href="{{RELATED_2_HREF}}" class="product-card reveal" style="text-decoration:none;color:inherit;">
+          <div class="product-img">
+            <img src="images/{{RELATED_2_IMAGE}}" alt="{{RELATED_2_NAME}} — AthiTerra" width="400" height="200" loading="lazy"/>
+          </div>
+          <div class="product-body">
+            <h3>{{RELATED_2_NAME}}</h3>
+            <span class="product-link">View Product &#8594;</span>
+          </div>
+        </a>
+
+        <a href="{{RELATED_3_HREF}}" class="product-card reveal" style="text-decoration:none;color:inherit;">
+          <div class="product-img">
+            <img src="images/{{RELATED_3_IMAGE}}" alt="{{RELATED_3_NAME}} — AthiTerra" width="400" height="200" loading="lazy"/>
+          </div>
+          <div class="product-body">
+            <h3>{{RELATED_3_NAME}}</h3>
+            <span class="product-link">View Product &#8594;</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer + WhatsApp injected by components.js — no edits needed -->
+  <footer id="site-footer"></footer>
+  <div id="site-whatsapp"></div>
+
+  <!-- ============================================================
+       STEP 7: Don't forget!
+       1. Add your product image to the /images folder
+       2. Add a line in components.js → PRODUCT_LINKS array
+       3. Add a card on products.html
+       4. Add URL to sitemap.xml
+       ============================================================ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+  <script src="components.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

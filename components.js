@@ -16,7 +16,7 @@ const SITE = {
   // India office
   phoneIndia: "+91 9176 492 844",
   phoneTelIndia: "+919176492844",
-  locationIndia: "Athiganoor, Tamilnadu, India",
+  locationIndia: "Athiganoor, TN, India",
   website: "www.athiterra.com",
   websiteUrl: "https://www.athiterra.com",
   facebook: "https://www.facebook.com/athiterra",

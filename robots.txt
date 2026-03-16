@@ -1,4 +1,12 @@
+# AthiTerra - Premium Gherkin Exporter
+# https://athiterra.com
+ 
 User-agent: *
 Allow: /
-
+ 
+# Block non-content pages
+Disallow: /scripts/
+Disallow: /components/
+ 
+# Sitemap location
 Sitemap: https://athiterra.com/sitemap.xml

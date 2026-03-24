@@ -564,3 +564,47 @@ footer { background: linear-gradient(160deg, #1a5c2a 0%, #145e20 50%, #1a5c2a 10
   .values-grid { grid-template-columns: 1fr 1fr; }
   .quality-cards { grid-template-columns: 1fr; }
 }
+
+/* ===== INLINE FAQ SECTIONS ===== */
+.page-faq { max-width: 800px; margin: 0 auto; }
+.page-faq-item {
+  border: 1px solid var(--border); border-radius: 12px; margin-bottom: 0.8rem;
+  overflow: hidden; transition: box-shadow 0.3s;
+}
+.page-faq-item:hover { box-shadow: var(--card-shadow); }
+.page-faq-q {
+  width: 100%; background: none; border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.2rem 1.4rem; font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem; font-weight: 600; color: var(--text);
+  text-align: left; line-height: 1.4; transition: color 0.2s;
+}
+.page-faq-q:hover { color: var(--green); }
+.page-faq-icon {
+  flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%;
+  background: var(--light-green); display: flex; align-items: center;
+  justify-content: center; font-size: 1.1rem; color: var(--green);
+  transition: transform 0.3s, background 0.3s; margin-left: 1rem;
+}
+.page-faq-item.open .page-faq-icon { transform: rotate(45deg); background: var(--green); color: #fff; }
+.page-faq-a {
+  max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s;
+  padding: 0 1.4rem;
+}
+.page-faq-item.open .page-faq-a { max-height: 400px; padding: 0 1.4rem 1.4rem; }
+.page-faq-a p {
+  font-size: 0.92rem; line-height: 1.8; color: var(--text-mid); margin-bottom: 0;
+}
+.page-faq-a a { color: var(--green); font-weight: 600; text-decoration: none; }
+.page-faq-a a:hover { text-decoration: underline; }
+
+/* GMP Steps */
+.gmp-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; margin-top: 2rem; }
+.gmp-card {
+  background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--green);
+  border-radius: 10px; padding: 1.5rem; box-shadow: var(--card-shadow); transition: transform 0.3s;
+}
+.gmp-card:hover { transform: translateY(-3px); }
+.gmp-card h4 { font-size: 0.95rem; color: var(--text); margin-bottom: 0.4rem; }
+.gmp-card p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.7; margin-bottom: 0; }
+@media (max-width: 600px) { .gmp-grid { grid-template-columns: 1fr; } }

@@ -61,6 +61,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What can be customised in a gherkin order?","acceptedAnswer":{"@type":"Answer","text":"Everything — gherkin size and cut (whole, sliced, diced, spear), preservation medium (brine, vinegar, acetic acid), seasoning and spice blends, acidity and salt levels, packing format, and labelling for private-label products."}},{"@type":"Question","name":"Is there a minimum order for custom formulations?","acceptedAnswer":{"@type":"Answer","text":"Custom orders typically require a minimum of one 20-foot container, but we are flexible and happy to discuss trial quantities for new partnerships. contact.html Get in touch to discuss your needs."}},{"@type":"Question","name":"How long does it take to develop a custom gherkin product?","acceptedAnswer":{"@type":"Answer","text":"Development timelines vary by complexity. A simple specification change (e.g., custom size grade or acidity) can be turned around quickly. More complex formulations involving proprietary seasonings or unique packaging typically take 4–6 weeks for sampling and approval."}}]}
+  </script>
 </head>
 <body>
   <div class="toast" id="toast">&#10003; Message sent! We'll be in touch soon.</div>
@@ -168,6 +172,31 @@
     </div>
   </section>
 
+  <!-- FAQ Section -->
+  <section style="background:var(--off-white);">
+    <div class="section-inner">
+      <div class="reveal" style="text-align:center; max-width:750px; margin:0 auto 2rem;">
+        <p class="section-tag">Common Questions</p>
+        <h2 class="section-title">Frequently Asked <span class="g">Questions</span></h2>
+        <span class="swoosh-line"></span>
+      </div>
+      <div class="page-faq reveal">
+        <div class="page-faq-item">
+          <button class="page-faq-q" onclick="togglePageFaq(this)">What can be customised in a gherkin order?<span class="page-faq-icon">+</span></button>
+          <div class="page-faq-a"><p>Everything — gherkin size and cut (whole, sliced, diced, spear), preservation medium (brine, vinegar, acetic acid), seasoning and spice blends, acidity and salt levels, packing format, and labelling for private-label products.</p></div>
+        </div>
+        <div class="page-faq-item">
+          <button class="page-faq-q" onclick="togglePageFaq(this)">Is there a minimum order for custom formulations?<span class="page-faq-icon">+</span></button>
+          <div class="page-faq-a"><p>Custom orders typically require a minimum of one 20-foot container, but we are flexible and happy to discuss trial quantities for new partnerships. <a href="contact.html">Get in touch</a> to discuss your needs.</p></div>
+        </div>
+        <div class="page-faq-item">
+          <button class="page-faq-q" onclick="togglePageFaq(this)">How long does it take to develop a custom gherkin product?<span class="page-faq-icon">+</span></button>
+          <div class="page-faq-a"><p>Development timelines vary by complexity. A simple specification change (e.g., custom size grade or acidity) can be turned around quickly. More complex formulations involving proprietary seasonings or unique packaging typically take 4–6 weeks for sampling and approval.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
   <div class="vm-band">
     <div class="vm-inner" style="text-align:center; grid-template-columns:1fr;">
@@ -229,5 +258,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
   <script src="components.js"></script>
   <script src="script.js"></script>
+
+  <script>
+  function togglePageFaq(btn){var i=btn.closest('.page-faq-item'),w=i.classList.contains('open');i.closest('.page-faq').querySelectorAll('.page-faq-item').forEach(function(e){e.classList.remove('open')});if(!w)i.classList.add('open');}
+  </script>
 </body>
 </html>

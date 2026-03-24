@@ -61,6 +61,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What slice thickness options are available?","acceptedAnswer":{"@type":"Answer","text":"Our sliced gherkins are precision-cut to consistent thickness, typically 3–5 mm. Custom thickness specifications are available for industrial food processing and QSR applications."}},{"@type":"Question","name":"Are sliced gherkins suitable for burger and sandwich production?","acceptedAnswer":{"@type":"Answer","text":"Yes — our sliced gherkins are specifically designed for sandwich lines, fast-food chains, and food service applications. Uniform thickness ensures consistent layering and portion control across production runs."}},{"@type":"Question","name":"What packing formats are available for sliced gherkins?","acceptedAnswer":{"@type":"Answer","text":"Sliced gherkins are available in food-grade HDPE drums (220L) for bulk supply, pails (10–15 kg) for food service, and glass jars or cans for retail distribution."}}]}
+  </script>
 </head>
 <body>
   <div class="toast" id="toast">&#10003; Message sent! We'll be in touch soon.</div>
@@ -168,6 +172,31 @@
     </div>
   </section>
 
+  <!-- FAQ Section -->
+  <section style="background:var(--off-white);">
+    <div class="section-inner">
+      <div class="reveal" style="text-align:center; max-width:750px; margin:0 auto 2rem;">
+        <p class="section-tag">Common Questions</p>
+        <h2 class="section-title">Frequently Asked <span class="g">Questions</span></h2>
+        <span class="swoosh-line"></span>
+      </div>
+      <div class="page-faq reveal">
+        <div class="page-faq-item">
+          <button class="page-faq-q" onclick="togglePageFaq(this)">What slice thickness options are available?<span class="page-faq-icon">+</span></button>
+          <div class="page-faq-a"><p>Our sliced gherkins are precision-cut to consistent thickness, typically 3–5 mm. Custom thickness specifications are available for industrial food processing and QSR applications.</p></div>
+        </div>
+        <div class="page-faq-item">
+          <button class="page-faq-q" onclick="togglePageFaq(this)">Are sliced gherkins suitable for burger and sandwich production?<span class="page-faq-icon">+</span></button>
+          <div class="page-faq-a"><p>Yes — our sliced gherkins are specifically designed for sandwich lines, fast-food chains, and food service applications. Uniform thickness ensures consistent layering and portion control across production runs.</p></div>
+        </div>
+        <div class="page-faq-item">
+          <button class="page-faq-q" onclick="togglePageFaq(this)">What packing formats are available for sliced gherkins?<span class="page-faq-icon">+</span></button>
+          <div class="page-faq-a"><p>Sliced gherkins are available in food-grade HDPE drums (220L) for bulk supply, pails (10–15 kg) for food service, and glass jars or cans for retail distribution.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
   <div class="vm-band">
     <div class="vm-inner" style="text-align:center; grid-template-columns:1fr;">
@@ -229,5 +258,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
   <script src="components.js"></script>
   <script src="script.js"></script>
+
+  <script>
+  function togglePageFaq(btn){var i=btn.closest('.page-faq-item'),w=i.classList.contains('open');i.closest('.page-faq').querySelectorAll('.page-faq-item').forEach(function(e){e.classList.remove('open')});if(!w)i.classList.add('open');}
+  </script>
 </body>
 </html>

@@ -61,6 +61,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What dice sizes are available?","acceptedAnswer":{"@type":"Answer","text":"Our diced gherkins are cut to uniform dimensions suitable for relish production, salad dressings, tartar sauces, and ready-meal manufacturing. Standard dice sizes range from 5–8 mm. Custom sizing is available."}},{"@type":"Question","name":"Can diced gherkins be used for relish production?","acceptedAnswer":{"@type":"Answer","text":"Yes — diced gherkins are one of the primary ingredients in relish manufacturing. We also offer a ready-made product-gherkin-relish.html gherkin relish product for buyers who prefer a finished formulation."}},{"@type":"Question","name":"What is the shelf life of diced gherkins?","acceptedAnswer":{"@type":"Answer","text":"Diced gherkins preserved in acetic acid have a shelf life of 18–24 months when stored properly. Vinegar-packed retail formats can last 24–36 months when pasteurised."}}]}
+  </script>
 </head>
 <body>
   <div class="toast" id="toast">&#10003; Message sent! We'll be in touch soon.</div>
@@ -168,6 +172,31 @@
     </div>
   </section>
 
+  <!-- FAQ Section -->
+  <section style="background:var(--off-white);">
+    <div class="section-inner">
+      <div class="reveal" style="text-align:center; max-width:750px; margin:0 auto 2rem;">
+        <p class="section-tag">Common Questions</p>
+        <h2 class="section-title">Frequently Asked <span class="g">Questions</span></h2>
+        <span class="swoosh-line"></span>
+      </div>
+      <div class="page-faq reveal">
+        <div class="page-faq-item">
+          <button class="page-faq-q" onclick="togglePageFaq(this)">What dice sizes are available?<span class="page-faq-icon">+</span></button>
+          <div class="page-faq-a"><p>Our diced gherkins are cut to uniform dimensions suitable for relish production, salad dressings, tartar sauces, and ready-meal manufacturing. Standard dice sizes range from 5–8 mm. Custom sizing is available.</p></div>
+        </div>
+        <div class="page-faq-item">
+          <button class="page-faq-q" onclick="togglePageFaq(this)">Can diced gherkins be used for relish production?<span class="page-faq-icon">+</span></button>
+          <div class="page-faq-a"><p>Yes — diced gherkins are one of the primary ingredients in relish manufacturing. We also offer a ready-made <a href="product-gherkin-relish.html">gherkin relish</a> product for buyers who prefer a finished formulation.</p></div>
+        </div>
+        <div class="page-faq-item">
+          <button class="page-faq-q" onclick="togglePageFaq(this)">What is the shelf life of diced gherkins?<span class="page-faq-icon">+</span></button>
+          <div class="page-faq-a"><p>Diced gherkins preserved in acetic acid have a shelf life of 18–24 months when stored properly. Vinegar-packed retail formats can last 24–36 months when pasteurised.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
   <div class="vm-band">
     <div class="vm-inner" style="text-align:center; grid-template-columns:1fr;">
@@ -229,5 +258,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
   <script src="components.js"></script>
   <script src="script.js"></script>
+
+  <script>
+  function togglePageFaq(btn){var i=btn.closest('.page-faq-item'),w=i.classList.contains('open');i.closest('.page-faq').querySelectorAll('.page-faq-item').forEach(function(e){e.classList.remove('open')});if(!w)i.classList.add('open');}
+  </script>
 </body>
 </html>

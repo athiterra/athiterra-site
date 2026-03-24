@@ -61,6 +61,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can AthiTerra create custom relish formulations?","acceptedAnswer":{"@type":"Answer","text":"Yes. We offer custom relish formulations with adjustable sweet/tangy profiles, spice blends, and texture. This is ideal for private-label brands. See our product-custom-solutions.html custom solutions page for more."}},{"@type":"Question","name":"What makes AthiTerra's gherkin relish different?","acceptedAnswer":{"@type":"Answer","text":"Our relish is made from premium-grade diced gherkins with balanced sweet and tangy profiles using natural ingredients only — no artificial colours, flavours, or preservatives. Clean-label ready."}},{"@type":"Question","name":"Is the relish available in retail-ready packaging?","acceptedAnswer":{"@type":"Answer","text":"Yes. Gherkin relish is available in glass jars for retail, pails for food service, and drums for industrial buyers. Custom packaging and labelling options are also available for private-label partners."}}]}
+  </script>
 </head>
 <body>
   <div class="toast" id="toast">&#10003; Message sent! We'll be in touch soon.</div>
@@ -168,6 +172,31 @@
     </div>
   </section>
 
+  <!-- FAQ Section -->
+  <section style="background:var(--off-white);">
+    <div class="section-inner">
+      <div class="reveal" style="text-align:center; max-width:750px; margin:0 auto 2rem;">
+        <p class="section-tag">Common Questions</p>
+        <h2 class="section-title">Frequently Asked <span class="g">Questions</span></h2>
+        <span class="swoosh-line"></span>
+      </div>
+      <div class="page-faq reveal">
+        <div class="page-faq-item">
+          <button class="page-faq-q" onclick="togglePageFaq(this)">Can AthiTerra create custom relish formulations?<span class="page-faq-icon">+</span></button>
+          <div class="page-faq-a"><p>Yes. We offer custom relish formulations with adjustable sweet/tangy profiles, spice blends, and texture. This is ideal for private-label brands. See our <a href="product-custom-solutions.html">custom solutions</a> page for more.</p></div>
+        </div>
+        <div class="page-faq-item">
+          <button class="page-faq-q" onclick="togglePageFaq(this)">What makes AthiTerra's gherkin relish different?<span class="page-faq-icon">+</span></button>
+          <div class="page-faq-a"><p>Our relish is made from premium-grade diced gherkins with balanced sweet and tangy profiles using natural ingredients only — no artificial colours, flavours, or preservatives. Clean-label ready.</p></div>
+        </div>
+        <div class="page-faq-item">
+          <button class="page-faq-q" onclick="togglePageFaq(this)">Is the relish available in retail-ready packaging?<span class="page-faq-icon">+</span></button>
+          <div class="page-faq-a"><p>Yes. Gherkin relish is available in glass jars for retail, pails for food service, and drums for industrial buyers. Custom packaging and labelling options are also available for private-label partners.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
   <div class="vm-band">
     <div class="vm-inner" style="text-align:center; grid-template-columns:1fr;">
@@ -229,5 +258,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
   <script src="components.js"></script>
   <script src="script.js"></script>
+
+  <script>
+  function togglePageFaq(btn){var i=btn.closest('.page-faq-item'),w=i.classList.contains('open');i.closest('.page-faq').querySelectorAll('.page-faq-item').forEach(function(e){e.classList.remove('open')});if(!w)i.classList.add('open');}
+  </script>
 </body>
 </html>

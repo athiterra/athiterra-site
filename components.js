@@ -32,6 +32,8 @@ const NAV_LINKS = [
   { label: "About Us", href: "about.html",     id: "about" },
   { label: "Products", href: "products.html",  id: "products" },
   { label: "Quality",  href: "quality.html",   id: "quality" },
+  { label: "Blog",     href: "blog.html",      id: "blog" },
+  { label: "FAQ",      href: "faq.html",       id: "faq" },
   { label: "Contact",  href: "contact.html",   id: "contact", isButton: true }
 ];
 

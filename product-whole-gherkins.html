@@ -61,6 +61,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What sizes of whole gherkins does AthiTerra offer?","acceptedAnswer":{"@type":"Answer","text":"We offer whole gherkins in all standard international grades: cornichon/fine (3–6 cm), medium/standard (6–9 cm), and large (9–12 cm). Custom grading is also available to match your specifications."}},{"@type":"Question","name":"What preservation options are available for whole gherkins?","acceptedAnswer":{"@type":"Answer","text":"Whole gherkins are available in brine, natural vinegar, or acetic acid. Each affects flavour and shelf life differently. Learn more in our blog-brine-vs-vinegar-gherkin-preservation.html preservation guide."}},{"@type":"Question","name":"What is the minimum order for whole gherkins?","acceptedAnswer":{"@type":"Answer","text":"For bulk supply in HDPE drums, a standard minimum is one 20-foot container (approximately 80 drums / 20 MT). contact.html Contact us for trial or smaller quantities."}}]}
+  </script>
 </head>
 <body>
   <div class="toast" id="toast">&#10003; Message sent! We'll be in touch soon.</div>
@@ -168,6 +172,31 @@
     </div>
   </section>
 
+  <!-- FAQ Section -->
+  <section style="background:var(--off-white);">
+    <div class="section-inner">
+      <div class="reveal" style="text-align:center; max-width:750px; margin:0 auto 2rem;">
+        <p class="section-tag">Common Questions</p>
+        <h2 class="section-title">Frequently Asked <span class="g">Questions</span></h2>
+        <span class="swoosh-line"></span>
+      </div>
+      <div class="page-faq reveal">
+        <div class="page-faq-item">
+          <button class="page-faq-q" onclick="togglePageFaq(this)">What sizes of whole gherkins does AthiTerra offer?<span class="page-faq-icon">+</span></button>
+          <div class="page-faq-a"><p>We offer whole gherkins in all standard international grades: cornichon/fine (3–6 cm), medium/standard (6–9 cm), and large (9–12 cm). Custom grading is also available to match your specifications.</p></div>
+        </div>
+        <div class="page-faq-item">
+          <button class="page-faq-q" onclick="togglePageFaq(this)">What preservation options are available for whole gherkins?<span class="page-faq-icon">+</span></button>
+          <div class="page-faq-a"><p>Whole gherkins are available in brine, natural vinegar, or acetic acid. Each affects flavour and shelf life differently. Learn more in our <a href="blog-brine-vs-vinegar-gherkin-preservation.html">preservation guide</a>.</p></div>
+        </div>
+        <div class="page-faq-item">
+          <button class="page-faq-q" onclick="togglePageFaq(this)">What is the minimum order for whole gherkins?<span class="page-faq-icon">+</span></button>
+          <div class="page-faq-a"><p>For bulk supply in HDPE drums, a standard minimum is one 20-foot container (approximately 80 drums / 20 MT). <a href="contact.html">Contact us</a> for trial or smaller quantities.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
   <div class="vm-band">
     <div class="vm-inner" style="text-align:center; grid-template-columns:1fr;">
@@ -229,5 +258,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
   <script src="components.js"></script>
   <script src="script.js"></script>
+
+  <script>
+  function togglePageFaq(btn){var i=btn.closest('.page-faq-item'),w=i.classList.contains('open');i.closest('.page-faq').querySelectorAll('.page-faq-item').forEach(function(e){e.classList.remove('open')});if(!w)i.classList.add('open');}
+  </script>
 </body>
 </html>

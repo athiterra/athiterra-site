@@ -65,6 +65,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What products does AthiTerra offer?","acceptedAnswer":{"@type":"Answer","text":"We offer a complete range of export-grade gherkin products including whole gherkins, sliced gherkins, diced gherkins, gherkin relish, bulk packs, and custom ingredient solutions tailored to your specifications."}},{"@type":"Question","name":"Which countries does AthiTerra export to?","acceptedAnswer":{"@type":"Answer","text":"We export to global markets including the USA, Germany, France, Spain, Russia, Canada, Australia, Japan, and other countries across North America, Europe, and Asia-Pacific."}},{"@type":"Question","name":"What makes AthiTerra different from other gherkin suppliers?","acceptedAnswer":{"@type":"Answer","text":"AthiTerra is a women-led business combining direct farm access in India with a US-based office in Bentonville, Arkansas. We offer clean-label products, full traceability, and personalised service — from custom formulations to flexible packing formats."}},{"@type":"Question","name":"How do I request samples or a quote?","acceptedAnswer":{"@type":"Answer","text":"Contact us through our contact.html enquiry form, email info@athiterra.com, or call +1 479 412 0868. Share your product requirements and we will arrange samples for evaluation."}}]}
+  </script>
 </head>
 <body>
   <div class="toast" id="toast">&#10003; Message sent! We'll be in touch soon.</div>
@@ -281,6 +285,35 @@
     </div>
   </section>
 
+  <!-- FAQ Section -->
+  <section style="background:var(--off-white);">
+    <div class="section-inner">
+      <div class="reveal" style="text-align:center; max-width:750px; margin:0 auto 2rem;">
+        <p class="section-tag">Common Questions</p>
+        <h2 class="section-title">Frequently Asked <span class="g">Questions</span></h2>
+        <span class="swoosh-line"></span>
+      </div>
+      <div class="page-faq reveal">
+        <div class="page-faq-item">
+          <button class="page-faq-q" onclick="togglePageFaq(this)">What products does AthiTerra offer?<span class="page-faq-icon">+</span></button>
+          <div class="page-faq-a"><p>We offer a complete range of export-grade gherkin products including whole gherkins, sliced gherkins, diced gherkins, gherkin relish, bulk packs, and custom ingredient solutions tailored to your specifications.</p></div>
+        </div>
+        <div class="page-faq-item">
+          <button class="page-faq-q" onclick="togglePageFaq(this)">Which countries does AthiTerra export to?<span class="page-faq-icon">+</span></button>
+          <div class="page-faq-a"><p>We export to global markets including the USA, Germany, France, Spain, Russia, Canada, Australia, Japan, and other countries across North America, Europe, and Asia-Pacific.</p></div>
+        </div>
+        <div class="page-faq-item">
+          <button class="page-faq-q" onclick="togglePageFaq(this)">What makes AthiTerra different from other gherkin suppliers?<span class="page-faq-icon">+</span></button>
+          <div class="page-faq-a"><p>AthiTerra is a women-led business combining direct farm access in India with a US-based office in Bentonville, Arkansas. We offer clean-label products, full traceability, and personalised service — from custom formulations to flexible packing formats.</p></div>
+        </div>
+        <div class="page-faq-item">
+          <button class="page-faq-q" onclick="togglePageFaq(this)">How do I request samples or a quote?<span class="page-faq-icon">+</span></button>
+          <div class="page-faq-a"><p>Contact us through our <a href="contact.html">enquiry form</a>, email info@athiterra.com, or call +1 479 412 0868. Share your product requirements and we will arrange samples for evaluation.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA BAND (links to contact page — no duplicated form) -->
   <div class="vm-band">
     <div class="vm-inner" style="text-align:center; grid-template-columns:1fr;">
@@ -303,5 +336,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
   <script src="components.js"></script>
   <script src="script.js"></script>
+
+  <script>
+  function togglePageFaq(btn){var i=btn.closest('.page-faq-item'),w=i.classList.contains('open');i.closest('.page-faq').querySelectorAll('.page-faq-item').forEach(function(e){e.classList.remove('open')});if(!w)i.classList.add('open');}
+  </script>
 </body>
 </html>
